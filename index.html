@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobHunter | Simulador de Empleo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">JobHunter</h1>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#cv">Mi CV</a>
+        <a href="#empleos">Ofertas</a>
+        <a href="#consejos">Consejos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Portada -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h2>Simula tu búsqueda de empleo</h2>
+        <p>Explora ofertas, completa tu perfil y entrena tus habilidades laborales.</p>
+        <a href="#empleos" class="btn-primary">Explorar ofertas</a>
+      </div>
+    </section>
+
+    <!-- Formulario de CV -->
+    <section id="cv" class="section">
+      <div class="container">
+        <h2>Mi Currículum</h2>
+        <form id="cvForm">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="habilidades">Habilidades</label>
+            <textarea id="habilidades" name="habilidades" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-secondary">Guardar CV</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Ofertas de Empleo -->
+    <section id="empleos" class="section alt">
+      <div class="container">
+        <h2>Ofertas Disponibles</h2>
+        <div id="jobsList" class="card-grid">
+          <!-- Aquí se insertarán dinámicamente las tarjetas -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Consejos -->
+    <section id="consejos" class="section">
+      <div class="container">
+        <h2>Consejos Laborales</h2>
+        <div id="tipsList" class="tips">
+          <!-- Aquí se insertarán dinámicamente los tips -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 JobHunter. Proyecto educativo sin fines comerciales.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
