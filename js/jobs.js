@@ -4,7 +4,6 @@ import { jobOffers } from "./data.js";
 
 export function renderJobs() {
   const jobsContainer = document.getElementById("jobsList");
-
   if (!jobsContainer) return;
 
   jobsContainer.innerHTML = "";
@@ -20,23 +19,6 @@ export function renderJobs() {
       <p><em>${job.location}</em></p>
     `;
 
-    jobsContainer.appendChild(card);
-  });
-}
-// js/jobs.js
-
-import { jobOffers } from "./data.js";
-import { createJobCard } from "./ui.js";
-
-export function renderJobs() {
-  const jobsContainer = document.getElementById("jobsList");
-
-  if (!jobsContainer) return;
-
-  jobsContainer.innerHTML = "";
-
-  jobOffers.forEach(job => {
-    const card = createJobCard(job);
     jobsContainer.appendChild(card);
   });
 }
