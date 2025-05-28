@@ -1,24 +1,10 @@
 // js/jobs.js
+// js/main.js
+import { renderJobs } from "./jobs.js";
+import { renderTips } from "./tips.js";
+import { handleForm } from "./form.js";
 
-import { jobOffers } from "./data.js";
-
-export function renderJobs() {
-  const jobsContainer = document.getElementById("jobsList");
-  if (!jobsContainer) return;
-
-  jobsContainer.innerHTML = "";
-
-  jobOffers.forEach(job => {
-    const card = document.createElement("div");
-    card.classList.add("job-card");
-
-    card.innerHTML = `
-      <h3>${job.title}</h3>
-      <p><strong>Empresa:</strong> ${job.company}</p>
-      <p>${job.description}</p>
-      <p><em>${job.location}</em></p>
-    `;
-
-    jobsContainer.appendChild(card);
-  });
-}
+// Ejecutar funciones al cargar la página
+renderJobs();
+renderTips();
+handleForm();

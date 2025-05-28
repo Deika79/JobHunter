@@ -25,7 +25,6 @@ export function handleForm() {
     form.reset();
   });
 }
-// js/form.js
 
 import { showAlert } from "./ui.js";
 
