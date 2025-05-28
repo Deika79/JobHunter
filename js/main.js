@@ -60,7 +60,7 @@ function handleForm() {
 
 
 
-import { careerTips } from "./data.js";
+
 import { renderJobs } from "./jobs.js";
 import { handleForm } from "./form.js";
 import { createTipItem } from "./ui.js";
