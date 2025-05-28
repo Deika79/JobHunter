@@ -1,6 +1,6 @@
 // js/jobs.js
 
-import { jobOffers } from "./data.js";
+import { jobOffers } from "/data.js";
 
 export function renderJobs() {
   const jobsContainer = document.getElementById("jobsList");

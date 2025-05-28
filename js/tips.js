@@ -1,6 +1,6 @@
 // js/tips.js
-import { careerTips } from "./data.js";
-import { createTipItem } from "./ui.js";
+import { careerTips } from "/data.js";
+import { createTipItem } from "/ui.js";
 
 export function renderTips() {
   const tipsContainer = document.getElementById("tipsList");

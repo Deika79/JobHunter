@@ -26,7 +26,7 @@ export function handleForm() {
   });
 }
 
-import { showAlert } from "./ui.js";
+import { showAlert } from "/ui.js";
 
 export function handleForm() {
   const form = document.getElementById("cvForm");
