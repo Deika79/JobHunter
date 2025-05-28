@@ -1,24 +1,24 @@
-// js/main.js
+// js/jobs.js
 
-import { jobOffers, careerTips } from "./data.js";
-import { renderJobs } from "./jobs.js";
-import { handleForm } from "./form.js";
-import { createTipItem } from "./ui.js";
+import { jobOffers } from "./data.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderJobs();
-  renderTips();
-  handleForm();
-});
+export function renderJobs() {
+  const jobsContainer = document.getElementById("jobsList");
+  if (!jobsContainer) return;
 
-function renderTips() {
-  const tipsContainer = document.getElementById("tipsList");
-  if (!tipsContainer) return;
+  jobsContainer.innerHTML = "";
 
-  tipsContainer.innerHTML = "";
+  jobOffers.forEach(job => {
+    const card = document.createElement("div");
+    card.classList.add("job-card");
 
-  careerTips.forEach(tip => {
-    const tipItem = createTipItem(tip);
-    tipsContainer.appendChild(tipItem);
+    card.innerHTML = `
+      <h3>${job.title}</h3>
+      <p><strong>Empresa:</strong> ${job.company}</p>
+      <p>${job.description}</p>
+      <p><em>${job.location}</em></p>
+    `;
+
+    jobsContainer.appendChild(card);
   });
 }
